@@ -1,0 +1,141 @@
+.titulo {
+    background-color: #4b4949; /* Color de fondo oscuro */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno */
+    font-size: 18px; /* Tamaño de la fuente */
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.titulo1 {
+    margin-top: 2rem;
+    color: #1b1b1b;
+    text-align: left;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+
+}
+
+.parrafo1{
+    color: rgb(73, 73, 71);
+    text-decoration: underline;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.comentario1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    border-left:5px solid #302f2f;
+    color: #4b4949;
+    font-size: 12px;
+    background-color: #e2dcdc;
+}
+
+.caja1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 18px;
+    border: solid black 2px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(90, 89, 89);
+}
+
+.caja2{
+    margin-top: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 18px;
+    border: solid black 4.7px;
+    background-color: rgb(226, 150, 36);
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px rgb(90, 89, 89);
+}
+
+.cajarela{
+    position: relative;
+    margin-top: 18px;
+    background-color: rgb(27, 216, 216,0.5);
+    padding: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.cajaabso{
+    position: absolute;
+    background-color: rgb(9, 75, 87);
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    border-radius: 12px;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+@media screen and (max-width: 600px){
+    
+    .body{
+        background-color: rgb(109, 58, 58);
+    }
+    .titulo{
+        font-size: 10px;
+    }
+}
+    
+.containerGrid{
+    display: grid;
+    margin-top: 30px;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 300px);
+}
+
+.elemento{
+    background-color: hwb(231 21% 33%);
+    font-size: 12px;
+    text-align: center;
+    padding: 15px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    border: solid black 2px;
+    border-radius: 10px;
+}
+.cuadrado{
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: 0.4s ease-out;
+}
+.cuadrado:hover{
+    cursor: pointer;
+    background-color: aqua;
+    
+}
+
+.circulo {
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(0, 255, 64);
+    transition: 0.4s ease-out;
+    border-radius: 70px;
+    animation: mover 1s infinite;
+}
+
+@keyframes mover {
+    0%{
+        transform:translatex(0)
+    }
+    50%{
+        transform:translatex(200px)
+    }
+    100%{
+        transform:translatex(0px)
+    }
+    
+}
