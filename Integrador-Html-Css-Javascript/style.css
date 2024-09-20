@@ -1,0 +1,321 @@
+/*=======GENERALES=======*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+/*=======HEADER=======*/
+.container__principalHeader {
+  width: 100vw;
+  height: 8vh;
+  background-color: #0b0c5e;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container__contentHeader {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.headerSearch {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1vh;
+}
+
+.inputHeader {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1.8vh;
+  height: 2vh;
+  width: 20vw;
+}
+
+.buttonSearch {
+  font-size: 1rem;
+  border: 2px solid white;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 11vw;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.buttonSearch:hover {
+  cursor: pointer;
+  background-color: #0b0c5e;
+}
+
+.header__buttonAdd {
+  font-size: 1rem;
+  width: 20vw;
+  padding: 0.5rem;
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: 0.2s ease;
+}
+
+.header__buttonAdd:hover {
+  cursor: pointer;
+  background-color: #0b0c5e;
+}
+
+/*=======MAIN=======*/
+.container__view {
+  display: grid;
+  grid-template-columns: 0.2fr 0.8fr;
+}
+
+.listAside {
+  height: 92vh;
+}
+
+/*=======STORE=======*/
+.store {
+  max-height: 92vh;
+  background-color: #eeee;
+  overflow-y: auto;
+  width: 100%;
+  /*overflow y max-heigth permite que hagamos scroll sobre el store, pero nuestro contenido se
+  queda de la misma manera*/
+}
+
+.sectionStore {
+  background-color: white;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.containerTitleSection {
+  margin: 1rem;
+  font-size: 3vh;
+  border-bottom: 1px solid grey;
+}
+
+.containerProductStore {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 0.6fr);
+  gap: 2vh;
+}
+
+.containerTargetItem {
+  width: 20vw;
+  height: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  transition: 0.2s ease;
+}
+
+.containerTargetItem:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+
+.containerTargetItem h2 {
+  font-size: 2vh;
+  text-align: center;
+  margin: 0.9rem;
+}
+
+.targetProps {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sectionStore img {
+  width: 100%;
+  border-radius: 0.5rem;
+  box-shadow: 2px 2px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*=======LIST ASIDE=======*/
+.listAside {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listAside h2 {
+  margin-top: 2vh;
+  display: flex;
+  font-size: 4vh;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.listAside span {
+  font-size: 4vh;
+}
+
+.listAside ul {
+  margin-top: 3vh;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-star;
+  justify-content: space-around;
+  gap: 1vh;
+}
+
+.listAside ul li {
+  font-size: 2vh;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.listAside ul li:hover {
+  cursor: pointer;
+  background-color: #0b0c5e;
+  color: white;
+}
+
+/*Esto es para cuando este activo el li que se seleccione*/
+.liActive {
+  background-color: #0b0c5e;
+  color: white;
+}
+
+/*=======POPUP=======*/
+.popUpContainer__principal {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  /*Fondo que le da a la caja de atras*/
+  backdrop-filter: blur(4px);
+}
+
+.popUpContainer {
+  width: 50vw;
+  height: 50vh;
+  background-color: white;
+  box-shadow: 5px 2px 10px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.containersInputs__popUp {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.containerTitlepopUp {
+  width: 100%;
+  text-align: center;
+}
+
+.containersInputs__popUp input,
+.containersInputs__popUp select {
+  width: 60%;
+  border: 1px solid grey;
+  padding: 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.containerButtonsPopUp {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttonPopUp {
+  padding: 0.6rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 2vh;
+}
+/*Tomar cada boton por separado*/
+.cancel {
+  background-color: rgb(240, 240, 64);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.cancel:hover {
+  background-color: rgb(206, 206, 73);
+}
+
+.accept {
+  background-color: rgb(46, 184, 46);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.accept:hover {
+  background-color: rgb(44, 160, 44);
+}
+
+.delete {
+  background-color: rgb(228, 43, 43);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+.delete:hover {
+  background-color: rgb(197, 32, 32);
+}
+
+/*=======MEDIA QUERIES=======*/
+@media screen and (min-width: 1280px) {
+  .containerProductStore {
+    grid-template-columns: repeat(4, 0.6fr);
+  }
+  .containerTargetItem {
+    width: 15vw;
+  }
+}
+
+/*=======SCROLLBAR=======*/
+::-webkit-scrollbar {
+  width: 0.7rem;
+  background-color: white;
+  border-radius: 0.4rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #0b0c5e;
+  border-radius: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0b0c5e;
+}
